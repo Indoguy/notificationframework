@@ -4,7 +4,7 @@ var dntrigger = document.getElementById('dntrigger');
 dnperm.addEventListener('click', function(e){
 	e.preventDefault();
 
-	if(!window.Notification) {
+	if(!window.Notification){
 		alert('Sorry, notifications are not supported.');
 	} else {
 		Notification.requestPermission(function(p){
@@ -15,4 +15,13 @@ dnperm.addEventListener('click', function(e){
 			}
 		});
 	}
+});
+
+// Simulate an event, with the trigger button
+dntrigger.addEventListener('click', function(e){
+	var notify;
+	
+	e.preventDefault();
+	
+	console.log(Notification.permission);
 });
