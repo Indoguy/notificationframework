@@ -1,39 +1,37 @@
-var dnperm = document.getElementById('dnperm');
-var dntrigger = document.getElementById('dntrigger');
-
-dnperm.addEventListener('click', function(e){
+// Notification will pop up after the page is loaded + x ms delay
+document.addEventListener('DOMContentLoaded', function(e){
+	
+	//--------------------------------------------------------//
+	//------------Customise the notification here-------------//
+	//--------------------------------------------------------//
+	
+	// Notification title
+	var messagetitle = 'Message from The Study Sessions!';
+	
+	// Notification Message
+	var messagebody = 'Click here to sign up for a session.';
+	
+	// Notification Icon
+	var messageicon = 'images/icon.png';
+	
+	// Notification onclick link
+	var messagelink = 'reservation.html';
+	
+	
+	
+	var popup;
 	e.preventDefault();
 
-	if(!window.Notification){
-		alert('Sorry, notifications are not supported.');
-	} else {
-		Notification.requestPermission(function(p){
-			if (p === 'denied'){
-				alert('You have denied notifications.');
-			} else if (p === 'granted'){
-				alert('You have granted notifications.');
-			}
-		});
-	}
-});
-
-// Simulate an event, with the trigger button
-dntrigger.addEventListener('click', function(e){
-	var notify;
-	
-	e.preventDefault();
-	
 	if(Notification.permission === 'default'){
 		alert('please allow notifications.');
 	} else {
-		notify = new Notification('New message from The Study Session.',{
-			body: 'Click here to sign up for The Study Sessions.',
-			icon: 'images/icon.png',
-			tag: 'hi'
+		popup = new Notification(messagetitle,{
+			body: messagebody, icon: messageicon
 		});
 		
-		notify.onclick = function(){
-			window.open('reservation.html', '_blank');
+		popup.onclick = function(){
+			window.open(messagelink, '_blank');
 		}
 	}
-});
+}, false);
+
