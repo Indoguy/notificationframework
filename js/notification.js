@@ -23,5 +23,12 @@ dntrigger.addEventListener('click', function(e){
 	
 	e.preventDefault();
 	
-	console.log(Notification.permission);
+	if(Notification.permission === 'default'){
+		alert('please allow notifications.');
+	} else {
+		notify = new Notification('New message from The Study Session.',{
+			body: 'Click here to sign up for The Study Sessions.',
+			icon: 'images/icon.png'
+		});
+	}
 });
