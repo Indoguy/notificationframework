@@ -28,7 +28,12 @@ dntrigger.addEventListener('click', function(e){
 	} else {
 		notify = new Notification('New message from The Study Session.',{
 			body: 'Click here to sign up for The Study Sessions.',
-			icon: 'images/icon.png'
+			icon: 'images/icon.png',
+			tag: 'hi'
 		});
+		
+		notify.onclick = function(){
+			window.open('reservation.html', '_blank');
+		}
 	}
 });
