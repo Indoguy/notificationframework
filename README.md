@@ -38,5 +38,3 @@ To edit the message, change this value ```var messagebody = 'Click here to sign 
 To change the icon, add a png or jpg image here ```var messageicon = 'images/icon.png';```
 
 To change the link where the notification will guide you to, change this value ```var messagelink = 'reservation.html';```
-
----
