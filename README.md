@@ -39,7 +39,4 @@ To change the icon, add a png or jpg image here ```var messageicon = 'images/ico
 
 To change the link where the notification will guide you to, change this value ```var messagelink = 'reservation.html';```
 
-Complete js Code
----
-
 ---
