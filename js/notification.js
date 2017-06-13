@@ -1,39 +1,27 @@
-var dnperm = document.getElementById('dnperm');
-var dntrigger = document.getElementById('dntrigger');
+// request permission on page load
+document.addEventListener('DOMContentLoaded', function () {
+  if (!Notification) {
+    alert('Desktop notifications not available in your browser. Try Chromium.'); 
+    return;
+  }
 
-dnperm.addEventListener('click', function(e){
-	e.preventDefault();
-
-	if(!window.Notification){
-		alert('Sorry, notifications are not supported.');
-	} else {
-		Notification.requestPermission(function(p){
-			if (p === 'denied'){
-				alert('You have denied notifications.');
-			} else if (p === 'granted'){
-				alert('You have granted notifications.');
-			}
-		});
-	}
+  if (Notification.permission !== "granted")
+    Notification.requestPermission();
 });
 
-// Simulate an event, with the trigger button
-dntrigger.addEventListener('click', function(e){
-	var notify;
-	
-	e.preventDefault();
-	
-	if(Notification.permission === 'default'){
-		alert('please allow notifications.');
-	} else {
-		notify = new Notification('New message from The Study Session.',{
-			body: 'Click here to sign up for The Study Sessions.',
-			icon: 'images/icon.png',
-			tag: 'hi'
-		});
-		
-		notify.onclick = function(){
-			window.open('reservation.html', '_blank');
-		}
-	}
-});
+function notifyMe() {
+  if (Notification.permission !== "granted")
+    Notification.requestPermission();
+  else {
+    var notification = new Notification('Notification title', {
+      icon: 'http://cdn.sstatic.net/stackexchange/img/logos/so/so-icon.png',
+      body: "Hey there! You've been notified!",
+    });
+
+    notification.onclick = function () {
+      window.open("http://stackoverflow.com/a/13328397/1269037");      
+    };
+
+  }
+
+}
