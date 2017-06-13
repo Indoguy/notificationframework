@@ -14,7 +14,7 @@ function popup() {
     Notification.requestPermission();
   else {
     var notification = new Notification('Confirmed!', {
-      icon: 'images/icon.png',
+      icon: 'images/up.jpg',
       body: "You are oh so confirmed!",
     });
 
@@ -24,4 +24,8 @@ function popup() {
 
   }
 
+}
+
+function timer() {
+	var delay = setTimeout(popup, 2000);
 }
