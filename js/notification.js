@@ -1,4 +1,4 @@
-// request permission on page load
+// Permission request, on page load
 document.addEventListener('DOMContentLoaded', function () {
   if (!Notification) {
     alert('Desktop notifications not available in your browser. Try Chromium.'); 
@@ -9,17 +9,17 @@ document.addEventListener('DOMContentLoaded', function () {
     Notification.requestPermission();
 });
 
-function notifyMe() {
+function popup() {
   if (Notification.permission !== "granted")
     Notification.requestPermission();
   else {
-    var notification = new Notification('Notification title', {
-      icon: 'http://cdn.sstatic.net/stackexchange/img/logos/so/so-icon.png',
-      body: "Hey there! You've been notified!",
+    var notification = new Notification('Confirmed!', {
+      icon: 'images/icon.png',
+      body: "You are oh so confirmed!",
     });
 
     notification.onclick = function () {
-      window.open("http://stackoverflow.com/a/13328397/1269037");      
+      window.open("confirmation.html");      
     };
 
   }
