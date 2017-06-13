@@ -14,10 +14,10 @@ document.addEventListener('DOMContentLoaded', function () {
 //--------------------------------------------------------------------------//
 //-----------------------------Framework Code-------------------------------//
 //--------------------------------------------------------------------------//
-//var Vp = "first assigned value"
-//var myFunction2;
+//var link = "confirmation.html";
 
-function popup() {
+function popup(link) {
+	console.log(link)
   if (Notification.permission !== "granted")
     Notification.requestPermission();
   else {
@@ -26,8 +26,6 @@ function popup() {
       body: "You are oh so confirmed!",
     });
 
-	  
-	  var link = "confirmation.html";
     notification.onclick = function () {
       window.open(link);      
     };
