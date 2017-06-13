@@ -1,4 +1,6 @@
-// Permission request, on page load
+//--------------------------------------------------------------------------//
+//----------------------Permission request, on page load--------------------//
+//--------------------------------------------------------------------------//
 document.addEventListener('DOMContentLoaded', function () {
   if (!Notification) {
     alert('Desktop notifications not available in your browser. Try Chromium.'); 
@@ -9,6 +11,12 @@ document.addEventListener('DOMContentLoaded', function () {
     Notification.requestPermission();
 });
 
+//--------------------------------------------------------------------------//
+//-----------------------------Framework Code-------------------------------//
+//--------------------------------------------------------------------------//
+//var Vp = "first assigned value"
+//var myFunction2;
+
 function popup() {
   if (Notification.permission !== "granted")
     Notification.requestPermission();
@@ -18,12 +26,12 @@ function popup() {
       body: "You are oh so confirmed!",
     });
 
+	  
+	  var link = "confirmation.html";
     notification.onclick = function () {
-      window.open("confirmation.html");      
+      window.open(link);      
     };
-
   }
-
 }
 
 function timer() {
