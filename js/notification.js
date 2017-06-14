@@ -14,16 +14,19 @@ document.addEventListener('DOMContentLoaded', function () {
 //--------------------------------------------------------------------------//
 //-----------------------------Framework Code-------------------------------//
 //--------------------------------------------------------------------------//
-//var link = "confirmation.html";
-
-function popup(link) {
+function popup(title, icon, body, link) {
+	var title = "Confirmed!";
+	var icon = "images/up.jpg";
+	var body = "You are oh so confirmed!";
+	var link = "confirmation.html";
+	
 	console.log(link)
   if (Notification.permission !== "granted")
     Notification.requestPermission();
   else {
-    var notification = new Notification('Confirmed!', {
-      icon: 'images/up.jpg',
-      body: "You are oh so confirmed!",
+    var notification = new Notification(title, {
+      icon: icon,
+      body: body,
     });
 
     notification.onclick = function () {
@@ -33,5 +36,5 @@ function popup(link) {
 }
 
 function timer() {
-	var delay = setTimeout(popup, 2000);
+	var delay = setTimeout(popup, 5000);
 }
