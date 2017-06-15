@@ -25,7 +25,7 @@ How To Implement?
 
 ### ADD LIBRARY
 
-Include the library at the bottom of your page, inside the body tag.
+Include the library within the head.
 
 ```<script src="js/notification.js"></script>```
 
