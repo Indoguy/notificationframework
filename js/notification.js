@@ -39,12 +39,12 @@ document.addEventListener('DOMContentLoaded', function () {
 //	var delay = setTimeout(popup, 5000);
 //}
 
-function PopupNotification(title, body, icon, link) {
+function PopupNotification(title, body, icon, link, delay) {
 	this.title = title;
 	this.body = body;
 	this.icon = icon;
 	this.link = link;
-//	this.delay = delay;
+	this.delay = delay;
 	
 //			console.log(delay);
 	
@@ -63,7 +63,9 @@ function PopupNotification(title, body, icon, link) {
   }
 }
 	
-	
+	this.timer = function() {
+		var delaypop = setTimeout(this.pop, this.delay);
+	}
 }
 
 
