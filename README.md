@@ -57,6 +57,6 @@ By adding *onclick="confirm.popup()"* to your button, your notification will pop
 
 
 By adding *onclick="confirm.popupdely()"* to your button, your notification will pop up with the given delay on a buttonclick.
-_In this case it is important to define the DELAY parameter!_**
+**In this case it is important to define the DELAY parameter!**
 
 ```<button onclick="confirm.popupdelay()">Confirm!</button>```
