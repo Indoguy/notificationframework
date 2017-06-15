@@ -23,13 +23,15 @@ What is customisable?
 How To Implement?
 ---
 
+### ADD LIBRARY
+
 Include the library at the bottom of your page, inside the body tag.
 
 ```<script src="js/notification.js"></script>```
 
 *In this case the notification.js is located inside the js folder.*
 
----
+### MAKE A NEW OBJECT
 
 ```
 	<script>
@@ -51,10 +53,13 @@ PopupNotification comes with the following parameters, ('title', 'body', 'icon',
 
 ---
 
+### INSTANT NOTIFICATION
+
 By adding *onclick="confirm.popup()"* to your button, your notification will pop up instantly with a buttonclick.
 
 ```<button onclick="confirm.popup()">Confirm!</button>```
 
+### DELAYED NOTIFICATION
 
 By adding *onclick="confirm.popupdely()"* to your button, your notification will pop up with the given delay on a buttonclick.
 **In this case it is important to define the DELAY parameter!**
