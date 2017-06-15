@@ -1,15 +1,15 @@
 //--------------------------------------------------------------------------//
 //----------------------Permission request, on page load--------------------//
 //--------------------------------------------------------------------------//
-//document.addEventListener('DOMContentLoaded', function () {
-//  if (!Notification) {
-//    alert('Desktop notifications not available in your browser. Try Chromium.'); 
-//    return;
-//  }
-//
-//  if (Notification.permission !== "granted")
-//    Notification.requestPermission();
-//});
+document.addEventListener('DOMContentLoaded', function () {
+  if (!Notification) {
+    alert('Desktop notifications not available in your browser. Try Chromium.'); 
+    return;
+  }
+
+  if (Notification.permission !== "granted")
+    Notification.requestPermission();
+});
 
 //--------------------------------------------------------------------------//
 //-----------------------------Framework Code-------------------------------//
@@ -44,6 +44,7 @@ function PopupNotification(title, body, icon, link) {
 	this.body = body;
 	this.icon = icon;
 	this.link = link;
+	console.log(link);
 //	this.delay = delay;
 	
 	this.pop = function() {
