@@ -33,12 +33,14 @@ Include the library at the bottom of your page, inside the body tag.
 ```
 	var confirm = new PopupNotification(
 				'Confirmation', 		// Edit title
-				'Click here to confirm!', 		// Edit Message
+				'Click here to confirm!', 	// Edit Message
 				'images/up.jpg', 		// Change Icon
 				'confirmation.html', 		// Change onclick Link
-				3000		// Edit delay speed [1000 = 1ms]
+				3000				// Edit delay speed [1000 = 1ms]
 			);
 ```
+
+
 
 How To Customise?
 ---
