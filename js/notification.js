@@ -47,11 +47,11 @@ var PopupNotification = function(title, body, icon, link, delay) {
 	this.delay = delay;
 	
 	this.timer = function() {
-		var delay = setTimeout(
+		var timerdelay = setTimeout(
 		
-			if (Notification.permission !== "granted") {
+			if (Notification.permission !== "granted")
 			Notification.requestPermission();
-			} else {
+			else {
 				var notification = new Notification(this.title, {
 					icon: this.icon, body: this.body
 				});
