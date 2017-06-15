@@ -34,11 +34,11 @@ Include the library at the bottom of your page, inside the body tag.
 ```
 	<script>
 		var confirm = new PopupNotification(
-			'Confirmation', 		// Edit title
-			'Click here to confirm!', 	// Edit Message
-			'images/up.jpg', 		// Change Icon
-			'confirmation.html', 		// Change onclick Link
-			3000				// Edit delay speed [1000 = 1ms]
+			'Confirmation', 		// Edit title, string
+			'Click here to confirm!', 	// Edit Message, string
+			'images/up.jpg', 		// Change Icon, string
+			'confirmation.html', 		// Change onclick Link, string
+			3000				// Edit delay speed [1000 = 1ms], int
 		);
 	</script>
 ```
@@ -57,5 +57,6 @@ By adding *onclick="confirm.popup()"* to your button, your notification will pop
 
 
 By adding *onclick="confirm.popupdely()"* to your button, your notification will pop up with the given delay on a buttonclick.
+_In this case it is important to define the DELAY parameter!_**
 
 ```<button onclick="confirm.popupdelay()">Confirm!</button>```
