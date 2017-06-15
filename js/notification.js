@@ -44,23 +44,25 @@ function PopupNotification(title, body, icon, link) {
 	this.body = body;
 	this.icon = icon;
 	this.link = link;
-	console.log(link);
 //	this.delay = delay;
+	
+//			console.log(delay);
 	
 	this.pop = function() {
 		if (Notification.permission !== "granted")
     Notification.requestPermission();
   else {
-    var notification = new Notification(this.title, {
-      icon: this.icon,
-      body: this.body,
+    var notification = new Notification(title, {
+      icon: icon,
+      body: body,
     });
 
     notification.onclick = function () {
-      window.open(this.link);      
+      window.open(link); 
     };
   }
 }
+	
 	
 }
 
