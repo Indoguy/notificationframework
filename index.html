@@ -10,11 +10,15 @@
 	
 	<body>
 		<h1>Remember to allow notifications!</h1>
-		<button onclick="PopupNotification()">Confirm!</button>
+		<button onclick="">Confirm!</button>
 		
 		<script>
-//			var popup = new PopupNotification('Hello', 'Yo', 'images/up.jpg', 'confirmation.html', 1000);
-//			popup.timer();
+			var popup = new PopupNotification('Hello', 'Yo', 'images/up.jpg', 'confirmation.html');
+			popup.pop();
+			var fag = new PopupNotification('Yo', 'Fack', 'images/up.jpg', 'confirmation.html');
+			fag.pop();
+			console.log(popup);
+			console.log(fag);
 		</script>
 	</body>
 	
