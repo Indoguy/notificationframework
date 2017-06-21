@@ -23,7 +23,7 @@ What is customisable?
 Demo
 ---
 
-http://www.tiesfa.com/git/index.html
+http://www.tiesfa.com/git/notification.html
 
 ---
 
