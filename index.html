@@ -2,23 +2,24 @@
 <html>
 	
 	<head>
-		<title>Notification Framework</title>
+		<title>Notification Library</title>
 		<meta charset="utf-8">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 		<script src="js/notification.js"></script>
 	</head>
 	
 	<body>
-		<h1>Remember to allow notifications!</h1>
+		
+		<h1>Demo</h1>
 		<button onclick="confirm.popupdelay()">Confirm!</button>
 		
 		<script>
 			var confirm = new PopupNotification(
-				'Confirmation', 				// Edit title
-				'Click here to confirm!', 		// Edit Message
-				'images/up.jpg', 				// Change Icon
-				'confirmation.html', 			// Change onclick Link
-				3000							// Edit delay speed [1000 = 1ms]
+				'Default title', 										// Edit title, string
+				'Default Message', 										// Edit Message, string
+				'images/default.png', 									// Change Icon, string
+				'https://github.com/Indoguy/notificationframework', 	// Change onclick Link, string
+				1000													// Edit delay speed [1000 = 1ms], int
 			);
 		</script>
 		
