@@ -34,15 +34,13 @@ Include the library within the head.
 ### MAKE A NEW OBJECT
 
 ```
-	<script>
-		var confirm = new PopupNotification(
-			'Confirmation', 		// Edit title, string
-			'Click here to confirm!', 	// Edit Message, string
-			'images/up.jpg', 		// Change Icon, string
-			'confirmation.html', 		// Change onclick Link, string
-			3000				// Edit delay speed [1000 = 1ms], int
-		);
-	</script>
+var confirm = new PopupNotification(
+	'Default title', 					// Edit title, string
+	'Default Message', 					// Edit Message, string
+	'images/default.png', 					// Change Icon, string
+	'https://github.com/Indoguy/notificationframework', 	// Change onclick Link, string
+	1000							// Edit delay speed [1000 = 1ms], int
+);
 ```
 
 In the code above you can see that I made a new object called "confirm" by doing:
