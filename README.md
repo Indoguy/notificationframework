@@ -1,4 +1,4 @@
-NOTIFICATION LIBRARY
+NOTIFICATION LIBRARY :right_anger_bubble:
 ===
 
 Made By Ties
@@ -17,13 +17,6 @@ What is customisable?
 * The icon
 * The notification link, this means that when you click on the notification it will guide you to the desired link
 * The delay speed, the time it will take for the notification until it pops up
-
----
-
-Demo
----
-
-http://www.tiesfa.com/git/notification.html
 
 ---
 
